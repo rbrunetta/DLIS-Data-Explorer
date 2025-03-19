@@ -47,7 +47,7 @@ def data(dlis_file):
                                 else:
                                     st.write(f"***{channel.name} - no data or multiple dimensions (ignored)***")
                             except Exception as e:
-                                st.write(f"Erro ao carregar o canal {channel.name}: {e}")
+                                st.write(f"Error loading channel {channel.name}: {e}")
                         
                         df = pd.DataFrame(data_dict)
                         
