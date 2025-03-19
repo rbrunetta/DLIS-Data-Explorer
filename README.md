@@ -19,6 +19,7 @@ To run locally, clone this repository and install the dependencies:
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
+````
 
 # Links
 
