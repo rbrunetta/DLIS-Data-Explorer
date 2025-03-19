@@ -9,16 +9,12 @@ import export
 
 st.set_page_config(layout="wide", page_title='DLIS Data Explorer')
 
-# Função para converter a imagem em base64
 def get_base64_image(image_path):
     with open(image_path, "rb") as img_file:
         return base64.b64encode(img_file.read()).decode('utf-8')
 
-# Converter a imagem do QR Code para base64
 qr_code_base64 = get_base64_image("QR-CODE_PIX.png")
 
-# Funções
-# Função para carregar o arquivo DLIS
 def dlis_load(uploaded_file):
     if uploaded_file is not None:
         st.session_state.uploaded_file_name = uploaded_file.name
@@ -43,7 +39,6 @@ def dlis_load(uploaded_file):
         st.warning("Please, select a DLIS file.")
         return None
 
-# Página "Home" (página inicial)
 def home_page():
     st.title("Welcome to DLIS Data Explorer")
     st.write("""
@@ -71,7 +66,6 @@ def home_page():
     Feel free to contact me or check out my other projects:
     """)
     
-    # Adicionar ícones clicáveis lado a lado
     col_left, col_center, col_right = st.columns([1, 3, 1])
     
     with col_center:
@@ -100,24 +94,19 @@ def home_page():
             </div>
         """, unsafe_allow_html=True)
     
-    # Seção de Doações
     st.markdown("### Support the Project")
-    # Adicionar margem inferior à frase
     st.markdown("""
         <div style="margin-bottom: 50px;">
             If you find this app useful, consider supporting its development through PayPal or PIX:
         </div>
     """, unsafe_allow_html=True)
     
-    # Criar colunas para centralizar os elementos de doação
     col_left, col_center, col_right = st.columns([1, 3, 1])
     
     with col_center:
-        # Criar subcolunas para PayPal e PIX lado a lado
         col_paypal, col_pix = st.columns(2)
         
         with col_paypal:
-            # Usar um contêiner com CSS para centralizar verticalmente
             st.markdown("""
                 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 250px;">
                     <h4 style="margin-bottom: 10px;">Donate via PayPal</h4>
@@ -128,7 +117,6 @@ def home_page():
             """, unsafe_allow_html=True)
         
         with col_pix:
-            # Usar um contêiner com CSS para centralizar verticalmente
             st.markdown(f"""
                 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 250px;">
                     <h4 style="margin-bottom: 10px;">Donate via PIX</h4>
@@ -137,7 +125,6 @@ def home_page():
                 </div>
             """, unsafe_allow_html=True)
 
-# Interface Streamlit
 st.sidebar.title('DLIS Data Explorer')
 st.sidebar.write('Load your DLIS file using the file upload option below')
 
@@ -148,11 +135,9 @@ if uploaded_file:
 else:
     dlis_file = None
     
-# Menu lateral
 st.sidebar.title('Menu')
 options = st.sidebar.radio('Pages', options=['Home', 'General Information', 'Data Visualization', 'Export'])
 
-# Navegação entre páginas
 if options == 'Home':
     home_page()
 elif dlis_file:
