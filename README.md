@@ -19,3 +19,9 @@ To run locally, clone this repository and install the dependencies:
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
+
+# Links
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([https://your-streamlit-app-url](https://dlis-data-explorer-xayxzoajcnaqzedrn8sqs8.streamlit.app/))
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
