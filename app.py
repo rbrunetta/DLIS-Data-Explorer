@@ -61,7 +61,7 @@ def home_page():
     
     st.markdown("### About the Developer")
     st.write("""
-    Hi, I'm Rodrigo Bruneta, a geologist, geophysicist and data scientist with experience in petroleum research
+    Hi, I'm Rodrigo Brunetta, a geologist, geophysicist and data scientist with experience in petroleum research
     and exploration. My passion for these three fields has led me to discover how programming can enhance our knowledge of the geosciences.
     Feel free to contact me or check out my other projects:
     """)
