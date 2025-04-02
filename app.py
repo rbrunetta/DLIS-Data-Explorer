@@ -80,7 +80,7 @@ def home_page():
                 </a>
                 <!-- Medium -->
                 <a href="https://medium.com/@rbrunetta" target="_blank">
-                    <img src="https://img.icons8.com/ios-filled/50/ffffff/XVNvUWCvvlD9" alt="Medium" width="40" height="40" />
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/medium-monogram.png" alt="Medium" width="40" height="40" />
                 </a>
                 <!-- LinkedIn -->
                 <a href="https://linkedin.com/in/rodrigo-brunetta" target="_blank">
