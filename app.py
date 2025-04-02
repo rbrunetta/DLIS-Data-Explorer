@@ -24,7 +24,6 @@ def dlis_load(uploaded_file):
                 tmp_file_path = tmp_file.name
             dlis_file = dlis.load(tmp_file_path)
             
-            # Verificar se o arquivo foi carregado corretamente
             if dlis_file:
                 st.sidebar.success('File Loaded Successfully!')
                 st.sidebar.write(f"Number of Logical Files: {len(dlis_file)}")
@@ -78,6 +77,10 @@ def home_page():
                 <!-- GitHub -->
                 <a href="https://github.com/rbrunetta" target="_blank">
                     <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub" width="40" height="40" />
+                </a>
+                <!-- Medium -->
+                <a href="https://medium.com/@rbrunetta" target="_blank">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/medium-monogram.png" alt="Medium" width="40" height="40" />
                 </a>
                 <!-- LinkedIn -->
                 <a href="https://linkedin.com/in/rodrigo-brunetta" target="_blank">
